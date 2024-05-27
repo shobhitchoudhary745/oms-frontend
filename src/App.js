@@ -33,7 +33,7 @@ const comp = [
   { path: "/forgot-password", comp: <ForgotPassword /> },
   { path: "/reset-password/:resetToken", comp: <ResetPassword /> },
   { path: "/home/faq", comp: <FaqPage /> },
-  { path: "/home/products", comp: <ProductList /> },
+
   { path: "/restricted", comp: <NotAllowed /> },
   { path: "*", comp: <NotFound /> },
 ];
@@ -42,6 +42,7 @@ const protectComp = [
   { path: "/home/my-account", comp: <Profile /> },
   { path: "/home/my-address", comp: <Addresses /> },
   { path: "/home/my-orders", comp: <AllOrders /> },
+  { path: "/home/products", comp: <ProductList /> },
   { path: "/home/order", comp: <Order /> },
   { path: "/home/product/:id", comp: <ProductDetails /> },
   { path: "/home/cart", comp: <Cart /> },
