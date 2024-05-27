@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import CardImageBox from "./CardImg";
 
 function ReactCard({ item }) {
-  console.log({ item })
+  console.log({ item });
   const navigate = useNavigate();
 
   // console.log("item ", item);
@@ -17,7 +17,15 @@ function ReactCard({ item }) {
         justifyContent: "center",
         alignItems: "center",
       }}
-      onClick={() => navigate(`/home/products/?category=${encodeURIComponent(item?.name)}`)}
+      onClick={() => {
+        if (localStorage.getItem("userToken"))
+          navigate(
+            `/home/products/?category=${encodeURIComponent(item?.name)}`
+          );
+        else {
+          navigate("/home/sign-in");
+        }
+      }}
     >
       <div className="category-img">
         <CardImageBox imgPath={item?.category_img} />

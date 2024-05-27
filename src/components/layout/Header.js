@@ -55,7 +55,7 @@ function ReactHeader() {
     await dispatch(setOrder());
     await dispatch(setaddress());
 
-    // navigate("/");
+    navigate("/");
   };
 
   // const handleNavigation = () => {
