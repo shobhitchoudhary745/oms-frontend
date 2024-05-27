@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import ReactPlaceholder from "react-placeholder";
 
 import CartItem from "./CartItem";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; 
 import { getCart } from "../features/apiCall";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
